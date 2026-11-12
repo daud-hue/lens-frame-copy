@@ -1,0 +1,54 @@
+{
+  "name": "Inquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Client's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Client's email address"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "marriage",
+        "events",
+        "corporate",
+        "other"
+      ],
+      "description": "Type of event they want photographed"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Anticipated event date"
+    },
+    "message": {
+      "type": "string",
+      "description": "Client's message or additional details"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "read",
+        "responded"
+      ],
+      "default": "new",
+      "description": "Status of the inquiry"
+    },
+    "review_sent": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether a review request email has been sent after the event"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "event_type",
+    "message"
+  ]
+}

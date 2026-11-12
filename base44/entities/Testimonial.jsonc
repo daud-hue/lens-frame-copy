@@ -1,0 +1,36 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Name of the client"
+    },
+    "quote": {
+      "type": "string",
+      "description": "Testimonial text"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "marriage",
+        "events",
+        "corporate"
+      ],
+      "description": "Type of event photographed"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Optional client photo"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "client_name",
+    "quote",
+    "event_type"
+  ]
+}

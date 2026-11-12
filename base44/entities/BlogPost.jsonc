@@ -1,0 +1,46 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Blog post title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug for the blog post"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Short summary shown on the blog list page"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full blog post content in markdown"
+    },
+    "cover_image_url": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "marriage",
+        "events",
+        "corporate",
+        "behind-the-lens"
+      ],
+      "description": "Blog category"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the post is publicly visible"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "content"
+  ]
+}

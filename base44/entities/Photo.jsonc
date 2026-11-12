@@ -1,0 +1,47 @@
+{
+  "name": "Photo",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title or caption for the photo"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "marriage",
+        "events",
+        "corporate"
+      ],
+      "description": "Photography category"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the uploaded photo"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this photo is featured on the homepage hero"
+    },
+    "display_order": {
+      "type": "number",
+      "default": 0,
+      "description": "Order in which the photo appears in its gallery"
+    },
+    "width_class": {
+      "type": "string",
+      "enum": [
+        "third",
+        "half",
+        "two-thirds"
+      ],
+      "default": "half",
+      "description": "Width proportion in the masonry grid"
+    }
+  },
+  "required": [
+    "category",
+    "image_url"
+  ]
+}

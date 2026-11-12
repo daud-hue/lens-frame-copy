@@ -1,0 +1,45 @@
+{
+  "name": "SiteContent",
+  "type": "object",
+  "properties": {
+    "photographer_name": {
+      "type": "string",
+      "description": "Photographer's name shown in the navbar and hero"
+    },
+    "hero_headline": {
+      "type": "string",
+      "description": "Main headline on the homepage hero"
+    },
+    "hero_subtext": {
+      "type": "string",
+      "description": "Subheading below the hero headline"
+    },
+    "bio_text": {
+      "type": "string",
+      "description": "Full bio / about text"
+    },
+    "profile_photo_url": {
+      "type": "string",
+      "description": "Photographer's portrait photo URL"
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Short tagline shown in the footer or secondary hero text"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone number"
+    },
+    "instagram_url": {
+      "type": "string",
+      "description": "Instagram profile URL"
+    }
+  },
+  "required": [
+    "photographer_name"
+  ]
+}
